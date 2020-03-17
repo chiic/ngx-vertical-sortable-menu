@@ -1,0 +1,110 @@
+.menu-btn {
+  width: 240px;
+  box-sizing: border-box;
+  padding: 0 16px;
+  position: relative;
+  user-select: none;
+  display: flex;
+  align-items: center;
+
+  .icon {
+    margin-right: 16px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+  }
+
+  i {
+    margin-right: 16px;
+  }
+
+  .icon-name {
+    display: inline-block;
+    height: 16px;
+    vertical-align: middle;
+    width: 150px;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &::before {
+        display: inline-block;
+        content: "";
+        height: 100%;
+        vertical-align: middle;
+    }
+  }
+
+  .handler-span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: none;
+    position: absolute;
+    right: 12px;
+    top: 0;
+    height: 100%;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 34px;
+
+    .close {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url('../../assets/images/close.png');
+        cursor: pointer;
+    }
+
+    .drag {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url('../../assets/images/drag.png');
+      cursor: move;
+    }
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+
+    .handler-span {
+      display: flex;
+    }
+  }
+}
+
+
+.menu-top {
+  z-index: 2;
+  background: #ffffff;
+  border-bottom: 1px solid #EAEEF5;
+}
+
+.menu-detail-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: calc(100% - 40px);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .lt-menu {
+    position: absolute;
+    transition: all 0.2s ease-out;
+  }
+
+  .isdrag {
+    z-index: 1;
+    background: #F5F7FA;
+    transition: all 0s;
+
+    .handler-span {
+      display: flex;
+    }
+  }
+}

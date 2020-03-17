@@ -1,0 +1,14 @@
+<ul class="menu-detail-items">
+  <ng-container *ngFor="let lt of menuListClone;let i=index">
+    <li class="lt-menu menu-btn" [style.height]="liHeight + 'px'" [class.isdrag]="i === indexflg"
+        [style.top]="i*liHeight + 'px'" [id]="'drag-index-' + i">
+      <img [src]="lt.icon" class="icon" *ngIf="!lt.iconType" />
+      <i [class]="lt.icon" *ngIf="lt.iconType === 'class'"></i>
+      <span class="icon-name" (click)="clickHandler(lt)" [title]="lt.name">{{lt.name}}</span>
+      <div class="handler-span">
+        <span class="close" (click)="closeItem($event, lt)"></span>
+        <span class="drag" (mousedown)="getItemIndex($event, i)"></span>
+      </div>
+    </li>
+  </ng-container>
+</ul>
