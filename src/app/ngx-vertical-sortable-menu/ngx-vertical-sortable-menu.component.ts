@@ -3,7 +3,7 @@ import { Component, OnInit, ElementRef, Input, Output, EventEmitter, SimpleChang
 import { MenuItem } from './interface';
 
 @Component({
-  selector: 'app-vertical-sortable-menu',
+  selector: 'ngx-vertical-sortable-menu',
   templateUrl: './ngx-vertical-sortable-menu.component.html',
   styleUrls: ['./ngx-vertical-sortable-menu.component.scss']
 })
