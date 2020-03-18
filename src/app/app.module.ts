@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { NgxVertialSortableMenuModule } from '../../dist';
-import { NgxVertialSortableMenuModule } from './ngx-vertial-sortable-menu/ngx-vertial-sortable-menu.module';
+import { NgxVerticalSortableMenuModule } from 'ngx-vertical-sortable-menu';
+// import { NgxVertialSortableMenuModule } from './ngx-vertial-sortable-menu/ngx-vertial-sortable-menu.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { NgxVertialSortableMenuModule } from './ngx-vertial-sortable-menu/ngx-ve
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxVertialSortableMenuModule
+    NgxVerticalSortableMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
-# NgxVertialSortableMenu
+# ngx-vertial-sortable-menu
 
-Vertical sorting drag component based on angular6 +
+Vertical sorting drag menu based on angular6 +
 
 ## Development server
 

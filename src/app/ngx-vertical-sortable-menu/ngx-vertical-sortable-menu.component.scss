@@ -1,5 +1,5 @@
 .menu-btn {
-  width: 240px;
+  width: 100%;
   box-sizing: border-box;
   padding: 0 16px;
   position: relative;
@@ -22,17 +22,17 @@
     display: inline-block;
     height: 16px;
     vertical-align: middle;
-    width: 150px;
+    width: 66%;
     height: 100%;
     cursor: pointer;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     &::before {
-        display: inline-block;
-        content: "";
-        height: 100%;
-        vertical-align: middle;
+      display: inline-block;
+      content: "";
+      height: 100%;
+      vertical-align: middle;
     }
   }
 
@@ -45,7 +45,6 @@
     position: absolute;
     right: 12px;
     top: 0;
-    height: 100%;
     display: none;
     justify-content: space-around;
     align-items: center;
@@ -89,7 +88,8 @@
   margin: 0;
   padding: 0;
   position: relative;
-  height: calc(100% - 40px);
+  height: 100%;
+  width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
 

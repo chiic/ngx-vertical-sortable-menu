@@ -2,5 +2,9 @@
 body, html {
     height: 100%;
 }
+* {
+    margin: 0;
+    padding: 0;
+}
 
-@import 'http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')

@@ -3,11 +3,11 @@ import { Component, OnInit, ElementRef, Input, Output, EventEmitter, SimpleChang
 import { MenuItem } from './interface';
 
 @Component({
-  selector: 'app-vertial-sortable-menu',
-  templateUrl: './ngx-vertial-sortable-menu.component.html',
-  styleUrls: ['./ngx-vertial-sortable-menu.component.scss']
+  selector: 'app-vertical-sortable-menu',
+  templateUrl: './ngx-vertical-sortable-menu.component.html',
+  styleUrls: ['./ngx-vertical-sortable-menu.component.scss']
 })
-export class NgxVertialSortableMenuComponent implements OnInit, OnChanges {
+export class NgxVerticalSortableMenuComponent implements OnInit, OnChanges {
   @Input() menuList: MenuItem[];
   @Input() liHeight: number;
 
@@ -47,17 +47,17 @@ export class NgxVertialSortableMenuComponent implements OnInit, OnChanges {
     const nowIndex = this.indexflg + this.changeNum;
     this.dragElement.style.top = top + move + 'px';
     if (move > this.liHeight / 2 + this.changeNum * this.liHeight && nowIndex < this.menuListClone.length - 1) {
-      const moveElement = this.el.nativeElement.querySelector(`#drag-index-${nowIndex + 1}`);
-      this.dragElement.setAttribute('id', `drag-index-${nowIndex + 1}`);
-      moveElement.setAttribute('id', `drag-index-${nowIndex}`);
+      const moveElement = this.el.nativeElement.querySelector(`#drag-lt-index_${nowIndex + 1}`);
+      this.dragElement.setAttribute('id', `drag-lt-index_${nowIndex + 1}`);
+      moveElement.setAttribute('id', `drag-lt-index_${nowIndex}`);
       moveElement.style.top = nowIndex * this.liHeight + 'px';
       this.changeNum++;
       return;
     }
     if (move < -this.liHeight / 2 + this.changeNum * this.liHeight && nowIndex > 0) {
-      const moveElement = this.el.nativeElement.querySelector(`#drag-index-${nowIndex - 1}`);
-      this.dragElement.setAttribute('id', `drag-index-${nowIndex - 1}`);
-      moveElement.setAttribute('id', `drag-index-${nowIndex}`);
+      const moveElement = this.el.nativeElement.querySelector(`#drag-lt-index_${nowIndex - 1}`);
+      this.dragElement.setAttribute('id', `drag-lt-index_${nowIndex - 1}`);
+      moveElement.setAttribute('id', `drag-lt-index_${nowIndex}`);
       moveElement.style.top = nowIndex * this.liHeight + 'px';
       this.changeNum--;
       return;

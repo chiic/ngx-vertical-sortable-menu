@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from './ngx-vertial-sortable-menu/interface';
+import { MenuItem } from 'ngx-vertical-sortable-menu';
 
 @Component({
   selector: 'app-root',
@@ -9,36 +9,58 @@ import { MenuItem } from './ngx-vertial-sortable-menu/interface';
 export class AppComponent implements OnInit {
   title = 'my-app';
   menus: MenuItem[];
+  groups = '';
 
   ngOnInit() {
     setTimeout(() => {
-     this.menus = [{
-        name: 'archives',
-        url: '/archives',
-        icon: 'fa fa-camera-retro fa-lg',
+      this.menus = [{
+        name: 'weixin',
+        url: '/weixin',
+        icon: 'fa fa-weixin',
         iconType: 'class'
       }, {
-        name: 'video screencasts',
-        url: '/video-screencasts',
-        icon: '3333',
+        name: 'reddit',
+        url: '/reddit',
+        icon: 'fa fa-reddit',
+        iconType: 'class'
       }, {
-        name: 'almanac',
-        url: '/almanac',
-        icon: '3333',
+        name: 'weibo',
+        url: '/weibo',
+        icon: 'fa fa-weibo',
+        iconType: 'class'
       }, {
-        name: 'snippets',
-        url: '/snippets',
-        icon: '3333',
+        name: 'github',
+        url: '/github',
+        icon: 'fa fa-github',
+        iconType: 'class'
       }, {
-        name: 'newsletters',
-        url: '/newsletters',
-        icon: '3333',
+        name: 'slack',
+        url: '/slack',
+        icon: 'fa fa-slack',
+        iconType: 'class'
       }, {
-        name: 'jobs',
-        url: '/jobs',
-        icon: 'jobs',
+        name: 'stack-overflow',
+        url: '/stack-overflow',
+        icon: 'fa fa-stack-overflow',
+        iconType: 'class'
+      }, {
+        name: 'wordpress',
+        url: '/wordpress',
+        icon: 'fa fa-wordpress',
+        iconType: 'class'
+      }, {
+        name: 'vk',
+        url: '/vk',
+        icon: 'fa fa-vk',
+        iconType: 'class'
+      }, {
+        name: 'usb',
+        url: '/usb',
+        icon: 'fa fa-usb',
+        iconType: 'class'
       }];
-    }, 5000);
+      this.groups = JSON.stringify(this.menus, null, '\t');
+    }, 1000);
   }
 
   clickEmit(item) {
@@ -50,6 +72,6 @@ export class AppComponent implements OnInit {
   }
 
   menuSort(groups) {
-    console.log(groups);
+    this.groups = JSON.stringify(groups, null, '\t');
   }
 }

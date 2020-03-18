@@ -1,6 +1,19 @@
-<app-vertial-sortable-menu
-  (closeEmit)="closeEmit($event)"
-  (clickEmit)="clickEmit($event)"
-  (menuSort)="menuSort($event)"
-  [menuList]="menus" liHeight="50"></app-vertial-sortable-menu>
+<div class="wp">
+  <div style="height: 100vh;border-right: 1px solid #cccccc;width: 240px;">
+    <app-vertical-sortable-menu
+    (closeEmit)="closeEmit($event)"
+    (clickEmit)="clickEmit($event)"
+    (menuSort)="menuSort($event)"
+    [menuList]="menus"
+    liHeight="40"></app-vertical-sortable-menu>
+  </div>
+  <div class="right" >
+    <div class="pre-wp">
+      <pre>{{groups}}</pre>
+    </div>
+  </div>
+</div>
+
+
+
 <router-outlet></router-outlet>
