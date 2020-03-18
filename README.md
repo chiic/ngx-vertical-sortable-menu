@@ -33,5 +33,5 @@ Use the NgxVerticalSortableMenuComponent  by placing:
   </div>
 ```
 ## Overview
-![sortable menu](https://raw.githubusercontent.com/chiic/ngx-vertical-sortable-menu/master/overview.png)
+![sortable menu](https://raw.githubusercontent.com/chiic/ngx-vertical-sortable-menu/master/overview.jpg)
 
