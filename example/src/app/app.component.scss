@@ -1,0 +1,27 @@
+.wp {
+    display: flex;
+    .right {
+        flex: 1;
+        .pre-wp {
+            width: 600px;
+            height: 500px;
+            overflow: auto;
+            pre {
+                word-wrap: normal;
+                word-break: break-all;
+                white-space: pre;
+                overflow-x: scroll;
+                overscroll-behavior-x: contain;
+                margin-top: 0;
+                margin-bottom: 20px;
+                border-radius: 4px;
+                z-index: 0;
+                padding: 1em;
+                line-height: 1.5;
+                color: #ccc;
+                background: #2d2d2d;
+            }
+        }
+
+    }
+}
