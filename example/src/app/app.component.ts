@@ -9,6 +9,8 @@ import { MenuItem } from 'ngx-vertical-sortable-menu';
 export class AppComponent implements OnInit {
   title = 'my-app';
   menus: MenuItem[];
+  clickEv = '';
+  index = 1;
 
   ngOnInit() {
     setTimeout(() => {
@@ -62,11 +64,11 @@ export class AppComponent implements OnInit {
   }
 
   clickEmit(item) {
-    console.log(item);
+    this.clickEv = item.name;
   }
 
   closeEmit(item) {
-    this.menus = this.menus.filter(l => item.name !== l.name);
+    this.menus = this.menus.filter(l => l.name !== item.name);
   }
 
   get groups() {
@@ -75,5 +77,19 @@ export class AppComponent implements OnInit {
 
   menuSort(groups) {
     this.menus = groups;
+  }
+
+  shiftHandler() {
+    this.menus.shift();
+    this.menus = [...this.menus];
+  }
+  pushHandler() {
+    this.menus = [...this.menus, {
+      name: 'test' + this.index,
+      url: '/test' + this.index,
+      icon: 'fa fa-weixin',
+      iconType: 'class'
+    }];
+    this.index++;
   }
 }
