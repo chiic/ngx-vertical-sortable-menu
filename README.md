@@ -35,6 +35,8 @@ Use the NgxVerticalSortableMenuComponent  by placing:
   </div>
 ```
 
+## Demo
+[demo][1]
 ## API
 
 ### interface
@@ -59,3 +61,6 @@ interface MenuItem {
 | (clickEmit)  |  Menu click event callback function.| EventEmitter&lt;MenuItem[]>  | -  |
 | (closeEmit)  |  Menu close event callback function.| EventEmitter&lt;MenuItem[]>  | -  |
 | (menuSort)  |  Returns the current data when dragged and sorted.| EventEmitter&lt;MenuItem[]>  | -  |
+
+
+  [1]: https://chiic.github.io/ngx-vertical

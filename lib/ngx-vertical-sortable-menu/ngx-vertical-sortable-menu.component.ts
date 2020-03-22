@@ -83,7 +83,8 @@ export class NgxVerticalSortableMenuComponent implements OnInit, OnChanges {
     this.indexflg = -1;
   }
 
-  clickHandler(item) {
+  clickHandler(event, item: MenuItem) {
+    event.stopPropagation();
     this.clickEmit.emit(item);
   }
 
