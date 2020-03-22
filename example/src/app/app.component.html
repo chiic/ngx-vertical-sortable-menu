@@ -8,9 +8,20 @@
     liHeight="40"></ngx-vertical-sortable-menu>
   </div>
   <div class="right" >
-    <div class="pre-wp">
-      <pre>{{groups}}</pre>
+    <p>Hi~ This is demo</p>
+    <div class="btn">
+      <button (click)="pushHandler()">+ Push</button>
+      <button (click)="shiftHandler()">- Shift</button>
+    </div>
+    <div class="content-1">
+      <div class="title">Click Event</div>
+      <div class="con"><b>Clicked: </b>{{clickEv}}</div>
+    </div>
+    <div class="content-2">
+      <div class="title">Menu Data</div>
+      <div class="pre-wp">
+        <pre>{{groups}}</pre>
+      </div>
     </div>
   </div>
 </div>
-<router-outlet></router-outlet>

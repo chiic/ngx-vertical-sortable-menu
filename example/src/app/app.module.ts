@@ -1,9 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgxVerticalSortableMenuModule } from 'ngx-vertical-sortable-menu';
+import { NgxVerticalSortableMenuModule } from '../../../src/app/ngx-vertical-sortable-menu/ngx-vertical-sortable-menu.module';
 // import { NgxVertialSortableMenuModule } from './ngx-vertial-sortable-menu/ngx-vertial-sortable-menu.module';
 
 @NgModule({
@@ -12,7 +11,6 @@ import { NgxVerticalSortableMenuModule } from 'ngx-vertical-sortable-menu';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     NgxVerticalSortableMenuModule
   ],
   providers: [],
