@@ -1,2 +1,2 @@
-export * from './src/app/ngx-vertical-sortable-menu/ngx-vertical-sortable-menu.module';
-export { MenuItem } from './src/app/ngx-vertical-sortable-menu/interface';
+export * from './lib/ngx-vertical-sortable-menu/ngx-vertical-sortable-menu.module';
+export { MenuItem } from './lib/ngx-vertical-sortable-menu/interface';

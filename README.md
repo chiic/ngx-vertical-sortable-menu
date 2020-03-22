@@ -1,6 +1,8 @@
 # ngx-vertical-sortable-menu
 
 Vertical sorting drag menu based on angular6 +
+## Overview
+![sortable menu](https://raw.githubusercontent.com/chiic/ngx-vertical-sortable-menu/master/overview.jpg)
 
 ## How to use it?
 
@@ -32,6 +34,28 @@ Use the NgxVerticalSortableMenuComponent  by placing:
     liHeight="40"></ngx-vertical-sortable-menu>
   </div>
 ```
-## Overview
-![sortable menu](https://raw.githubusercontent.com/chiic/ngx-vertical-sortable-menu/master/overview.jpg)
 
+## API
+
+### interface
+- MenuItem: 
+```javascript
+type iconTy = 'class';
+interface MenuItem {
+    name: string;
+    url: string;
+    icon?: string;
+    id?: string | number;
+    iconType?: iconTy;
+}
+```
+
+### Input &Output
+
+| Property  |Description   | Type  |   Default|
+| ------------ | ------------ | ------------ | ------------ |
+|[menuList]  |An array of the MenuItem type   |MenuItem[]   | -  |
+|  [liHeight] |  Menu line height | number  | -  |
+| (clickEmit)  |  Menu click event callback function.| EventEmitter&lt;MenuItem[]>  | -  |
+| (closeEmit)  |  Menu close event callback function.| EventEmitter&lt;MenuItem[]>  | -  |
+| (menuSort)  |  Returns the current data when dragged and sorted.| EventEmitter&lt;MenuItem[]>  | -  |

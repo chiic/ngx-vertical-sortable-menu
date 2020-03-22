@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgxVerticalSortableMenuModule } from 'ngx-vertical-sortable-menu';
+import { NgxVerticalSortableMenuModule } from '../../../dist';
 // import { NgxVertialSortableMenuModule } from './ngx-vertial-sortable-menu/ngx-vertial-sortable-menu.module';
 
 @NgModule({

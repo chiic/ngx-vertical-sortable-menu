@@ -54,7 +54,7 @@
         display: inline-block;
         width: 16px;
         height: 16px;
-        background: url('../../assets/images/close.png');
+        background: url('./images/close.png');
         cursor: pointer;
     }
 
@@ -62,7 +62,7 @@
       display: inline-block;
       width: 16px;
       height: 16px;
-      background: url('../../assets/images/drag.png');
+      background: url('./images/drag.png');
       cursor: move;
     }
   }

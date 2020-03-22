@@ -1,4 +1,4 @@
-type iconTy = 'class' | 'path';
+type iconTy = 'class';
 export interface MenuItem {
     name: string;
     url: string;

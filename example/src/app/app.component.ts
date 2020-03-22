@@ -9,7 +9,6 @@ import { MenuItem } from 'ngx-vertical-sortable-menu';
 export class AppComponent implements OnInit {
   title = 'my-app';
   menus: MenuItem[];
-  groups = '';
 
   ngOnInit() {
     setTimeout(() => {
@@ -59,7 +58,6 @@ export class AppComponent implements OnInit {
         icon: 'fa fa-usb',
         iconType: 'class'
       }];
-      this.groups = JSON.stringify(this.menus, null, '\t');
     }, 1000);
   }
 
@@ -68,10 +66,14 @@ export class AppComponent implements OnInit {
   }
 
   closeEmit(item) {
-    console.log(item);
+    this.menus = this.menus.filter(l => item.name !== l.name);
+  }
+
+  get groups() {
+    return JSON.stringify(this.menus, null, '\t');
   }
 
   menuSort(groups) {
-    this.groups = JSON.stringify(groups, null, '\t');
+    this.menus = groups;
   }
 }
