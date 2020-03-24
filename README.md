@@ -2,7 +2,10 @@
 
 Vertical sorting drag menu based on angular6 +
 ## Overview
-![sortable menu](https://raw.githubusercontent.com/chiic/ngx-vertical-sortable-menu/master/overview.jpg)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/chiic/ngx-vertical-sortable-menu/master/overview.jpg"
+       width = "50%" alt="Overview" align=center />
+</div>
 
 ## How to use it?
 
