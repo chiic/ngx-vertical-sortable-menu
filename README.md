@@ -61,8 +61,8 @@ interface MenuItem {
 | ------------ | ------------ | ------------ | ------------ |
 |[menuList]  |An array of the MenuItem type   |MenuItem[]   | -  |
 |  [liHeight] |  Menu line height | number  | -  |
-| (clickEmit)  |  Menu click event callback function.| EventEmitter&lt;MenuItem[]>  | -  |
-| (closeEmit)  |  Menu close event callback function.| EventEmitter&lt;MenuItem[]>  | -  |
+| (clickEmit)  |  Menu click event callback function.| EventEmitter&lt;MenuItem>  | -  |
+| (closeEmit)  |  Menu close event callback function.| EventEmitter&lt;MenuItem>  | -  |
 | (menuSort)  |  Returns the current data when dragged and sorted.| EventEmitter&lt;MenuItem[]>  | -  |
 
 
